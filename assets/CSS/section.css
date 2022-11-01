@@ -4,6 +4,21 @@
     box-shadow: 0 3px 6px #00000012
 }
 
+.site-inner.active{
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+.site-inner.active::after{
+    background: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    transition: all .5s ease;
+    z-index: 1;
+}
 
 
 
@@ -222,9 +237,10 @@
 .list-product{
     display: flex;
 }
-.owl-item{
+.owl-item {
     margin: 0 0.2rem;
 }
+
 .item-row.after-item::after{
     content: "";
     position: absolute;
@@ -237,16 +253,27 @@
     right: -1px;
 }
 
+.product-list .product-content{
+    
+}
+
 .product-list .product-content a{
     color: #666 !important;
 }
 .product-list .product-content h4{
     margin: 1rem 0;
+    text-overflow: ellipsis ;  
+    white-space: nowrap; 
+    width: 19rem;    
+    overflow: hidden;
+    
 }
 .product-list .product-content h4 a{
     color: #000 !important;
     font-size: 1.5rem;
     font-weight: 400;
+    overflow: hidden;
+    
 }
 .product-list .product-content span i{
     color: #16bcdc;

@@ -220,18 +220,84 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .menu-nav .nav-wrapper .nav-categori{
     padding: 2.5rem 10rem 2.5rem 2rem;
     background: #16bcdc;
     cursor: pointer;
- 
+    position: relative;
+    transition: 0.5s;
+}
+/* Mega Menu */
+.nav-wrapper .nav-categori .mega-menu{
+    position: absolute;
+    z-index: 1000;
+    margin-top: 2.5rem;
+    margin-left: -1.88rem;
+    background-color: #fff;
+    padding: 0 17rem 0 1rem;
+    border: 1px solid #16bcdc;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out ;
+    height: 0;
+    overflow: hidden;
+}
+.nav-wrapper .nav-categori .mega-menu.active{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    height: 20rem;
+    
+}
+.nav-wrapper .nav-categori .mega-menu .menu-ul{
+    padding-left: 1rem !important;
+    margin-top: 1rem;
+}
 
+.nav-wrapper .nav-categori .mega-menu span{
+    color: #000;
+    font-size: 1.2rem;
+}
+.nav-categori .mega-menu li{
+    position: relative;
+}
+.nav-categori .mega-menu li::after{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 22rem;
+    content: "";
+    bottom: 0;
+    margin: 0 auto;
+}
+.nav-categori .mega-menu .down{
+    position: absolute;
+    left:20rem;
+    top: 26%;
+    font-size: 0.5rem
+} 
+.nav-wrapper .nav-categori .mega-menu .down i{
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+.nav-wrapper .nav-categori .mega-menu .down i{
+    transform: rotate(-90deg);
+}
+
+
+/*!Mega Menu  */
+
+.menu-nav .nav-wrapper .nav-categori a i{
+    
 }
 .menu-nav .nav-wrapper .nav-categori i{
     transition: 0.5s ease-in-out;
 }
-.menu-nav .nav-wrapper .nav-categori:hover i{
+.menu-nav .nav-wrapper .nav-categori:hover .fa-bars{
     transform: rotateY(180deg);
 }
 
@@ -260,7 +326,7 @@
 .menu-nav .nav-wrapper .offer-heading{
     display: flex;
     background: #16bcdc;
-    padding: 2.6rem 1rem;
+    padding: 2.65rem 1rem;
     cursor: pointer;
     overflow: hidden;
 }
