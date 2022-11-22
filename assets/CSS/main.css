@@ -25,3 +25,33 @@ img{
     height: 100%;
     vertical-align: middle;
 }
+.page-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+#btn-Top{
+    background: #263b96;
+    border: 2px solid #fff;
+    bottom: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 1;
+    position: fixed;
+    right: 4rem;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    z-index: 100;
+    color: #fff;
+    /* display: none; */
+    top: auto!important;
+    font-size: 2.2rem;
+    color: #fff!important;
+    transition: 0.3s;
+    display: none;
+}
+#btn-Top:hover{
+    background: #16bcdc ;
+    border: 2px solid #fff;
+    color: #fff!important;
+}

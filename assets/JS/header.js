@@ -7,6 +7,12 @@ navCategori.addEventListener("click",()=>{
     siteInner.classList.toggle('active')
 })
 
+const toggleMobile = document.querySelector('.toggle');
+toggleMobile.addEventListener('click',()=>{
+    megaMenu.classList.toggle('active')
+    siteInner.classList.toggle('active')
+})
+
 
 
 

@@ -31,3 +31,22 @@
     })
     
 // !Slider
+
+// Get the button:
+const btnTop = document.querySelector('#btn-Top')
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 197 || document.documentElement.scrollTop > 197) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+}
+btnTop.addEventListener('click',()=>{
+    document.body.scrollTop = 0; 
+})
+
+//buildProduct
+
